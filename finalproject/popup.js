@@ -38,7 +38,7 @@ chrome.tabs.query({active: true, currentWindow: true}, function (tabs){
       else {
         console.log(response);
         let bias_score = score(response.data); 
-        console.log(bias_score);
+        Display_Bias_Score_Word(bias_score);
       }
     });
 
@@ -70,3 +70,24 @@ function score(text){
   return bias_score;
 }
 
+function Display_Bias_Score_Word(bias_score){console.log('hi');
+  if (0 <= bias_score && bias_score <= 0.4)
+  {
+    document.getElementById("bias").innerHTML = 'Neutral';
+    document.getElementById("bias").style.color = "green";
+  }
+  else if (0.4 < bias_score && bias_score <= 0.6)
+  {
+    document.getElementById("bias").innerHTML = 'Skewed';
+    document.getElementById("bias").style.color = "yellow";
+  }
+  else
+  {
+    document.getElementById("bias").innerHTML = 'Biased';
+    document.getElementById("bias").style.color = "red";
+  }
+}
+
+function Display_Political_Lean(political_lean) {
+  document.getElementById("lean").innerHTML = political_lean;
+}
