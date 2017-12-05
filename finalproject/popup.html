@@ -17,17 +17,16 @@
         padding-bottom: 20px;
         padding-left: 20px;
       }
-
       h1 {
         font-size: 15px;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         text-align: center;
       }
-
-      #container {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
+      span {
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        text-align: center;
       }
     </style>
 
@@ -42,19 +41,16 @@
 
   <body>
     <h1>Bias Metrics</h1>
-    <h1>Level of Bias</h1>
-    <!-- print to which tier the level of bias corresponds -->
-    <div id="container">
-      <select id="dropdown">
-        <option selected disabled hidden value=''></option>
-        <option value="white">White</option>
-        <option value="pink">Pink</option>
-        <option value="green">Green</option>
-        <option value="yellow">Yellow</option>
-      </select>
+    <div id="biaslevel">
+      <span>Level of Bias: </span>
+      <span id="bias">
+      </span> 
     </div>
-    <h1>Direction of Political Lean</h1>
-    <!-- print to which direction the political skew leans-->
+    <div id="politicallean">
+      <span>Direction of Political Lean: </span>
+      <span id="lean">
+      </span> 
+    </div>
+    
   </body>
 </html>
-  
