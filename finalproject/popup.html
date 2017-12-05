@@ -1,5 +1,4 @@
 <!doctype html>
-chrome.extension.getBackgroundPage().myURL;
 <!--
  This page is shown when the extension button is clicked, because the
  "browser_action" field in manifest.json contains the "default_popup" key with
@@ -7,15 +6,22 @@ chrome.extension.getBackgroundPage().myURL;
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Bias Metrics</title>
     <style type="text/css">
       body {
         margin: 10px;
         white-space: nowrap;
+        background-color: #F4F4F4;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
       }
 
       h1 {
         font-size: 15px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        text-align: center;
       }
 
       #container {
@@ -35,9 +41,10 @@ chrome.extension.getBackgroundPage().myURL;
   </head>
 
   <body>
-    <h1>Background Color Changer</h1>
+    <h1>Bias Metrics</h1>
+    <h1>Level of Bias</h1>
+    <!-- print to which tier the level of bias corresponds -->
     <div id="container">
-      <span>Choose a color</span>
       <select id="dropdown">
         <option selected disabled hidden value=''></option>
         <option value="white">White</option>
@@ -46,6 +53,8 @@ chrome.extension.getBackgroundPage().myURL;
         <option value="yellow">Yellow</option>
       </select>
     </div>
+    <h1>Direction of Political Lean</h1>
+    <!-- print to which direction the political skew leans-->
   </body>
 </html>
   

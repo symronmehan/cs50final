@@ -1,23 +1,22 @@
-  {
-      "name": "Bias Metrics",
-      "description": "Output metrics on the biases of article",
-      "version": "2.0",
-      "permissions": [
-        "activeTab"
-      ],
-      "browser_action": {
-        "default_icon": "icon.png",  
-        // https://www.colourbox.com/vector/yin-yang-symbol-vector-11532032
-        "default_title": "Bias Metrics",      
-        "default_popup": "popup.html"        
-      },
-      //"content_scripts": [
-        //{
-          //"matches": ["http://www.google.com/*"],
-          //"css": ["mystyles.css"],
-          //"js": ["jquery.js", "myscript.js"]
-        //}
-      //],
-      "manifest_version": 2
-  }
+{
+    "name": "Bias Metrics",
+    "description": "Output metrics on the biases of article",
+    "version": "2.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "browser_action": {
+      "default_icon": "icon.png",  
+      // https://www.colourbox.com/vector/yin-yang-symbol-vector-11532032
+      "default_title": "Bias Metrics",      
+      "default_popup": "popup.html"        
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "manifest_version": 2
+}
       
