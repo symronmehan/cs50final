@@ -22,11 +22,24 @@
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         text-align: center;
       }
-      span {
+      .datatypes {
         font-size: 13px;
         font-weight: bold;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         text-align: center;
+      }
+
+      .box {
+        border-style: solid;
+        padding: 10px;
+      }
+
+      #biaslevel {
+        margin-bottom: 10px;
+      }
+
+      #politicallean {
+        margin-top: 10px;
       }
     </style>
 
@@ -41,14 +54,14 @@
 
   <body>
     <h1>Bias Metrics</h1>
-    <div id="biaslevel">
+    <div class="box" id="biaslevel">
       <span>Level of Bias: </span>
-      <span id="bias">
+      <span class="datatypes" id="bias">
       </span> 
     </div>
-    <div id="politicallean">
+    <div class="box" id="politicallean">
       <span>Direction of Political Lean: </span>
-      <span id="lean">
+      <span class="datatypes" id="lean">
       </span> 
     </div>
     
