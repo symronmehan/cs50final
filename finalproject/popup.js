@@ -116,27 +116,39 @@ function lean(text){
     return '0'
 }
 
-function Display_Bias_Score_Word(bias_score){console.log('hi');
+function Display_Bias_Score_Word(bias_score){
   if (0 <= bias_score && bias_score <= 0.4)
   {
     document.getElementById("bias").innerHTML = 'Neutral';
-    document.getElementById("bias").style.color = "green";
+    document.getElementById("bias").style.background = "green";
   }
   else if (0.4 < bias_score && bias_score <= 0.6)
   {
     document.getElementById("bias").innerHTML = 'Skewed';
-    document.getElementById("bias").style.color = "yellow";
+    document.getElementById("bias").style.background = "yellow";
   }
   else
   {
     document.getElementById("bias").innerHTML = 'Biased';
-    document.getElementById("bias").style.color = "red";
+    document.getElementById("bias").style.background = "red";
   }
 }
 
 function Display_Political_Lean(political_lean) {
   document.getElementById("lean").innerHTML = political_lean;
+  if (political_lean < 0)
+  {
+    document.getElementById("lean").innerHTML = 'Conservative';
+    document.getElementById("lean").style.background = "red";
+  }
+  if (political_lean == 0)
+  {
+    document.getElementById("lean").innerHTML = 'Neutral';
+    document.getElementById("lean").style.background = "yellow";
+  }
+  if (political_lean > 0)
+  {
+    document.getElementById("bias").innerHTML = 'Liberal';
+    document.getElementById("lean").style.background = "blue";
+  }
 }
-
-
-
