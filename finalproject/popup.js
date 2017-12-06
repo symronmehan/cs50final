@@ -121,7 +121,6 @@ function Display_Bias_Score_Word(bias_score){
   {
     document.getElementById("bias").innerHTML = 'Neutral';
     document.getElementById("bias").style.background = "green";
-
   }
   else if (0.4 < bias_score && bias_score <= 0.6)
   {
