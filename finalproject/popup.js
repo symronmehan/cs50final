@@ -143,7 +143,7 @@ function Display_Political_Lean(political_lean) {
   else if (political_lean == 0)
   {
     document.getElementById("lean").innerHTML = 'Neutral';
-    document.getElementById("lean").style.background = "yellow";
+    document.getElementById("lean").style.background = "black";
   }
   else
   {
