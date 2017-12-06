@@ -121,7 +121,6 @@ function Display_Bias_Score_Word(bias_score){
   {
     document.getElementById("bias").innerHTML = 'Neutral';
     document.getElementById("bias").style.background = "green";
-
   }
   else if (0.4 < bias_score && bias_score <= 0.6)
   {
@@ -136,18 +135,17 @@ function Display_Bias_Score_Word(bias_score){
 }
 
 function Display_Political_Lean(political_lean) {
-  document.getElementById("lean").innerHTML = political_lean;
   if (political_lean < 0)
   {
     document.getElementById("lean").innerHTML = 'Conservative';
     document.getElementById("lean").style.background = "red";
   }
-  if (political_lean == 0)
+  else if (political_lean == 0)
   {
     document.getElementById("lean").innerHTML = 'Neutral';
     document.getElementById("lean").style.background = "yellow";
   }
-  if (political_lean > 0)
+  else
   {
     document.getElementById("bias").innerHTML = 'Liberal';
     document.getElementById("lean").style.background = "blue";
